@@ -15,7 +15,7 @@ public class Runner extends JPanel{
 		
 		Graphics2D g2 = (Graphics2D) g;
         g2.setStroke(new BasicStroke(5));
-        
+      
 		 
 		//1) draw a concentric rectangle that's 10pixels from all sides of the "gray"
 		//portion of the GUI
@@ -27,11 +27,11 @@ public class Runner extends JPanel{
 		
 		
 		//3) Draw a vertical line to bisect the shape again
-		g2.drawLine(765/2, 10, 765/2,550 );
+		g2.drawLine(765/2, 10, 765/2, 550 );
 		
 		
 		//4) small rectangles on top-left
-		g2.drawLine(765/4, 10, 765/4, 550/2-10);
+		//g2.drawLine(765/4, 10, 765/4, 550/2-10);
 		
 		
 		/* 
@@ -44,9 +44,49 @@ public class Runner extends JPanel{
 		 *   
 		 * }
 		 */
+		  Graphics2D g3 = (Graphics2D) g;
+	        g3.setStroke(new BasicStroke(1));
 		
-		 
-
+		int Line = 0; 
+		while (Line < 100) {
+			g3.drawLine ((int)(Math.random() * (765/2)) + 10 , (int)(Math.random() * (260)) + 10, (int)(Math.random() * (765/2)+ 10)  ,(int) (Math.random() * (260)+ 10   ));
+	
+			
+			Line ++;
+		
+		}
+		
+	int sqr = 0;
+	while (sqr < 100) {
+		int red =(int)(Math.random()*255);
+		int blue = (int)(Math.random()*255);
+		int green = (int)(Math.random()*255);
+		g3.fillRect((int)(Math.random()*(765/2)) + 380  , (int)(Math.random()*(260) -40), 50, 50 );
+	g3.setColor(new Color (red ,green ,blue ));
+		
+		
+		sqr ++;
+	
+	
+		
+		
+		
+	}
+	int crcl = 0;
+	while(crcl < 100 ) {
+		int crkl = (int)(Math.random()*(200))+10;
+		g3.drawOval((int) (Math.random()*(765/2 - crkl - 10 + 1) ) +10 , (int)(Math.random()* (540 - crkl -270  +1) ) , crkl, crkl);
+		
+		
+		crcl ++;
+		
+		
+		
+		
+	
+	}	
+	
+		
 	
 	
 	}
